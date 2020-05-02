@@ -1,0 +1,36 @@
+.footer {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  background: #00adee;
+  padding: 1rem 5vw;
+  color: white;
+  margin-top: 50px;
+}
+
+.logo-wrapper-footer {
+  display: grid;
+  align-items: center;
+  justify-items: left;
+}
+
+.menu-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: left;
+  font-size: xx-large;
+  color: #f0fbff;
+}
+
+.social-wrapper-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 20px;
+  align-items: center;
+  justify-items: right;
+  font-size: xx-large;
+  grid-gap: 10px;
+}
+
+.social-wrapper-footer a {
+  color: white;
+}

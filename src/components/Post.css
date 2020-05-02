@@ -1,0 +1,36 @@
+.singleContent {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+
+}
+
+.singleTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.singleImage {
+    width: 80%;
+    align-self: center;
+}
+
+.wordpressContent {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 80%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    align-items: center;
+}
+
+.wordpressContent video {
+    align-self: center;
+}
+
+.wp-block-video {
+    display: flex;
+    flex-direction: column;
+}
