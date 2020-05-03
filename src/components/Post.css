@@ -1,7 +1,6 @@
 .singleContent {
     display: flex;
     flex-direction: column;
-    margin: 20px;
     align-items: center;
 
 }
@@ -19,11 +18,18 @@
 .wordpressContent {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    max-width: 80%;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    align-items: center;
+    justify-items: center;
+}
+
+.wordpressContent p {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .wordpressContent video {
@@ -33,4 +39,30 @@
 .wp-block-video {
     display: flex;
     flex-direction: column;
+}
+
+.wordWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#dslc-theme-content {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dslc-theme-content-inner {
+    max-width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dslc-theme-content p {
+    align-self: center;
 }

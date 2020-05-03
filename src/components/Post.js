@@ -23,12 +23,14 @@ const Post = (props) => {
         alt="image"
         className="singleImage"
       />
-      {post && (
-        <div
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-          className="wordpressContent"
-        ></div>
-      )}
+      <div className="wordWrapper">
+        {post && (
+          <div
+            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            className="wordpressContent"
+          ></div>
+        )}
+      </div>
     </div>
   );
 };

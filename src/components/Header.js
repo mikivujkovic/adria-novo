@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginBottom: "40px",
+    maxWidth: "90vw",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   login: {
     height: "30px",
+    paddingRight: "20px",
   },
   menu: {
     fontSize: "30px",
