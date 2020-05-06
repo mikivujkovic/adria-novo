@@ -8,24 +8,24 @@ import youtubeIcon from "@iconify/icons-cib/youtube";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="social-wrapper-footer">
-        <div className="social-item">
+    <div className="footer-mobile">
+      <div className="social-wrapper-footer-mobile">
+        <div className="social-item-mobile">
           <a href="https://www.facebook.com/jovan.radulovic.3304">
             <Icon icon={facebookIcon} />
           </a>
         </div>
-        <div className="social-item">
+        <div className="social-item-mobile">
           <a href="https://www.instagram.com/_radulovic_jovan/">
             <Icon icon={instagramIcon} />
           </a>
         </div>
-        <div className="social-item">
+        <div className="social-item-mobile">
           <a href="https://www.instagram.com/_radulovic_jovan/">
             <Icon icon={twitterIcon} />
           </a>
         </div>
-        <div className="social-item">
+        <div className="social-item-mobile">
           <a href="https://www.instagram.com/_radulovic_jovan/">
             <Icon icon={youtubeIcon} />
           </a>

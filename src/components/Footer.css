@@ -1,4 +1,4 @@
-.footer {
+.footer-mobile {
   display: inline-flexbox;
   background: #00adee;
   padding: 1rem 5vw;
@@ -7,7 +7,7 @@
   width: 100vw;
 }
 
-.social-wrapper-footer {
+.social-wrapper-footer-mobile {
   display: flex;
   flex-grow: 1;
   align-items: stretch;
@@ -16,11 +16,11 @@
   width: 100%;
 }
 
-.social-wrapper-footer a {
+.social-wrapper-footer-mobile a {
   color: white;
 }
 
-.social-item {
+.social-item-mobile {
   display: flex;
   align-content: center;
   justify-content: center;
