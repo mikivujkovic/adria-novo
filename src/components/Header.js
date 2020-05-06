@@ -6,12 +6,14 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import logo from "./adria-logo-1.png";
-import loginIcon from "./LogIn.png";
+import logoMobile from "./logio-hor-1.png";
+//import loginIcon from "./LogIn.png";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import loginOutlined from "@iconify/icons-ant-design/login-outlined";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     alignSelf: "flex-end",
   },
+  fake: {
+    color: "#fff",
+  },
 }));
 
 function HideOnScroll(props) {
@@ -104,10 +109,10 @@ export default function Header(props) {
             />
             <div className={classes.logo}>
               <Link to="/">
-                <img src={logo} alt="logo" style={{ height: 50 }} />
+                <img src={logoMobile} alt="logo" style={{ height: 50 }} />
               </Link>
             </div>
-            <img src={loginIcon} alt="login" className={classes.login} />
+            <div className={classes.fake}>adria</div>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -128,7 +133,7 @@ export default function Header(props) {
           className={classes.drawerTitle}
         >
           <Link to="/" className={classes.link} onClick={toggleDrawer()}>
-            ADRIAPRESS
+            <img src={logoMobile} alt="logo" style={{ height: 50 }} />
           </Link>
         </Button>
         <Button color="secondary" size="large">
@@ -192,6 +197,11 @@ export default function Header(props) {
             onClick={toggleDrawer()}
           >
             Pretraga
+          </Link>
+        </Button>
+        <Button color="primary" size="large">
+          <Link to="/" className={classes.link} onClick={toggleDrawer()}>
+            <Icon icon={loginOutlined} />
           </Link>
         </Button>
       </SwipeableDrawer>

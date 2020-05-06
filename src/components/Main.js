@@ -5,8 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 // import CardPost from "./Card";
 import Grid from "@material-ui/core/Grid";
 // import BlogCard from "./BlogCard";
-import Featured from "./Featured";
-import CardDesign from "./CardDesign";
+import Featured1 from "./Featured1";
+import PostCardJovo from "./PostCardJovo";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import FeaturedMobile from "./FeaturedMobile";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     marginBottom: "20px",
   },
+  divider: {
+    backgroundColor: "#00adee",
+    height: "2px",
+  },
   content: {
     diplay: "flex",
     alignItems: "center",
@@ -50,6 +56,8 @@ function Home() {
   const [total, setTotal] = useState(0);
   const [pages, setPages] = useState(0);
   const [all, setAll] = useState([]);
+
+  const isLarge = useMediaQuery("(min-width:1280px)");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -80,15 +88,18 @@ function Home() {
     <div className={classes.root}>
       <div className={classes.content}>
         <Grid container justify="center" spacing={5}>
-          <Grid item xs={12} align="center">
-            {/* <div className={classes.feat}>
-              <Featured />
-            </div> */}
-            {all[0] && <Featured post={all[0]} />}
-          </Grid>
+          {all[0] && all[1] && all[2] && (
+            <Grid item xs={12} align="center">
+              {isLarge ? (
+                <Featured1 post1={all[0]} post2={all[1]} post3={all[2]} />
+              ) : (
+                <FeaturedMobile post1={all[0]} post2={all[1]} post3={all[2]} />
+              )}
+            </Grid>
+          )}
           {data.map((post) => (
             <Grid item key={post.id} xs={12} sm={6} lg={4} align="center">
-              <CardDesign post={post} />
+              <PostCardJovo post={post} />
             </Grid>
           ))}
         </Grid>

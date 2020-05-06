@@ -1,6 +1,5 @@
 .footer {
-  display: grid;
-  grid-template-columns: 8fr 2fr;
+  display: inline-flexbox;
   background: #00adee;
   padding: 1rem 5vw;
   color: white;
@@ -8,30 +7,23 @@
   width: 100vw;
 }
 
-.logo-wrapper-footer {
-  display: grid;
-  align-items: center;
-  justify-items: left;
-}
-
-.menu-wrapper {
-  display: grid;
-  align-items: center;
-  justify-items: left;
-  font-size: xx-large;
-  color: #f0fbff;
-}
-
 .social-wrapper-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-left: 20px;
-  align-items: center;
-  justify-items: right;
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  justify-items: center;
   font-size: xx-large;
-  grid-gap: 10px;
+  width: 100%;
 }
 
 .social-wrapper-footer a {
   color: white;
+}
+
+.social-item {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 5px;
 }

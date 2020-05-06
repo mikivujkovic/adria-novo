@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "@material-ui/lab/Pagination";
 import { makeStyles } from "@material-ui/core/styles";
-import CardDesign from "./CardDesign";
+import PostCardJovo from "./PostCardJovo";
 import Grid from "@material-ui/core/Grid";
 import { useHistory } from "react-router-dom";
 import searchIcon from "@iconify/icons-bytesize/search";
@@ -126,7 +126,7 @@ function Search(props) {
               justify="center"
               className={classes.cont}
             >
-              <CardDesign post={post} />
+              <PostCardJovo post={post} />
             </Grid>
           ))}
         </Grid>

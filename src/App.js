@@ -11,6 +11,7 @@ import Category from "./components/Category";
 import Search from "./components/Search";
 import Post from "./components/Post";
 import Footer from "./components/Footer";
+import FooterDesk from "./components/FooterDesk";
 
 export default function App() {
   const isLarge = useMediaQuery("(min-width:1280px)");
@@ -27,7 +28,7 @@ export default function App() {
             <Route path="/post/:id" component={Post} />
           </Switch>
         </div>
-        <Footer />
+        {isLarge ? <FooterDesk /> : <Footer />}
       </div>
     </ThemeProvider>
   );

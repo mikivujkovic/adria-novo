@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "@material-ui/lab/Pagination";
 import { makeStyles } from "@material-ui/core/styles";
-import CardDesign from "./CardDesign";
+import PostCardJovo from "./PostCardJovo";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +65,7 @@ function Category(props) {
         <Grid container justify="center" spacing={5}>
           {data.map((post) => (
             <Grid item key={post.id} xs={12} sm={6} lg={4} align="center">
-              <CardDesign post={post} />
+              <PostCardJovo post={post} />
             </Grid>
           ))}
         </Grid>
