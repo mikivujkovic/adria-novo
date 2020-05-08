@@ -115,7 +115,8 @@ const Date = styled.div`
 `;
 
 const dotBack = styled.div`
-  background: transparent;
+  background: "white";
+  border: none;
 `;
 
 const FeaturedMobile = (props) => {
