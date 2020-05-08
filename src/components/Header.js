@@ -7,6 +7,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logoMobile from "./logio-hor-1.png";
+import logoDrawer from "./logo-bijela-slova.png";
 //import loginIcon from "./LogIn.png";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     backgroundColor: "#00adee",
-    width: "70%",
+    width: "50%",
   },
   drawerTitle: {
     fontSize: "xx-large",
@@ -57,10 +58,28 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: theme.palette.common.white,
+    textAlign: "left",
   },
   title: {
     flexGrow: 1,
     alignSelf: "flex-end",
+  },
+  drawerLogo: {
+    display: "grid",
+    alignContent: "center",
+    justifyContent: "center",
+  },
+  drawerLinks: {
+    diplay: "grid",
+    gridTemplateColumns: "1fr",
+    alignItems: "center",
+    justifyItems: "center",
+  },
+  linkButton: {
+    alignItems: "flex-start",
+    textAlign: "left",
+    justifyContent: "flex-start",
+    paddingLeft: "20px",
   },
   fake: {
     color: "#fff",
@@ -126,17 +145,20 @@ export default function Header(props) {
           paper: classes.drawerPaper,
         }}
       >
-        <Button
-          color="primary"
-          size="large"
-          onClick={toggleDrawer()}
-          className={classes.drawerTitle}
-        >
-          <Link to="/" className={classes.link} onClick={toggleDrawer()}>
-            <img src={logoMobile} alt="logo" style={{ height: 50 }} />
-          </Link>
-        </Button>
-        <Button color="secondary" size="large">
+        <div className={classes.drawerLogo}>
+          <Button
+            color="primary"
+            size="large"
+            onClick={toggleDrawer()}
+            className={classes.drawerTitle}
+          >
+            <Link to="/" className={classes.link} onClick={toggleDrawer()}>
+              <img src={logoDrawer} alt="logo" style={{ height: 50 }} />
+            </Link>
+          </Button>
+        </div>
+
+        <Button color="secondary" size="large" className={classes.linkButton}>
           <Link
             to="/category/25"
             className={classes.link}
@@ -145,7 +167,7 @@ export default function Header(props) {
             Info
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/category/26"
             className={classes.link}
@@ -154,7 +176,7 @@ export default function Header(props) {
             Politika
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/category/5"
             className={classes.link}
@@ -163,7 +185,7 @@ export default function Header(props) {
             Kultura
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/category/27"
             className={classes.link}
@@ -172,7 +194,7 @@ export default function Header(props) {
             Tehno
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/category/7"
             className={classes.link}
@@ -181,7 +203,7 @@ export default function Header(props) {
             Sport
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/category/28"
             className={classes.link}
@@ -190,7 +212,7 @@ export default function Header(props) {
             Magazin
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link
             to="/search/ "
             className={classes.link}
@@ -199,7 +221,7 @@ export default function Header(props) {
             Pretraga
           </Link>
         </Button>
-        <Button color="primary" size="large">
+        <Button color="primary" size="large" className={classes.linkButton}>
           <Link to="/" className={classes.link} onClick={toggleDrawer()}>
             <Icon icon={loginOutlined} />
           </Link>

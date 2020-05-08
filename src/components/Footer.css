@@ -12,8 +12,9 @@
   flex-grow: 1;
   align-items: stretch;
   justify-items: center;
-  font-size: xx-large;
+  font-size: large;
   width: 100%;
+  height: 5vh;
 }
 
 .social-wrapper-footer-mobile a {

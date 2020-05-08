@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  DotGroup,
+  Dot,
+} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import "./FeaturedMobile.css";
 
 const Container = styled.div`
   display: grid;
@@ -10,7 +17,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 124%;
+  margin-left: -12%;
 `;
 
 const Left = styled.div`
@@ -107,6 +115,45 @@ const Date = styled.div`
 `;
 
 const FeaturedMobile = (props) => {
+  const tackice = (props) => {
+    const {
+      currentSlide,
+      totalSlides,
+      visibleSlides,
+      disableActiveDots,
+      showAsSelectedForCurrentSlideOnly,
+      renderDots,
+    } = props;
+
+    if (renderDots) {
+      const { renderDots: _, ...renderProps } = this.props;
+      return renderDots(renderProps);
+    }
+
+    const dots = [];
+    for (let i = 0; i < totalSlides; i += 1) {
+      const multipleSelected =
+        i >= currentSlide && i < currentSlide + visibleSlides;
+      const singleSelected = i === currentSlide;
+      const selected = showAsSelectedForCurrentSlideOnly
+        ? singleSelected
+        : multipleSelected;
+      const slide =
+        i >= totalSlides - visibleSlides ? totalSlides - visibleSlides : i;
+      dots.push(
+        <Dot
+          key={i}
+          slide={slide}
+          selected={selected}
+          disabled={disableActiveDots ? selected : false}
+        >
+          {selected ? <span>⚫</span> : <span>⚪</span>}
+        </Dot>
+      );
+    }
+    return dots;
+  };
+
   const desWidth = window.innerWidth * 0.9;
   const desHeight = desWidth * 0.66;
   return (
@@ -155,13 +202,7 @@ const FeaturedMobile = (props) => {
               <Post post={props.post3} />
             </Slide>
           </Slider>
-          <DotGroup
-            style={{
-              background: "#00adee",
-              color: "#fff",
-            }}
-            dotNumbers
-          />
+          <DotGroup renderDots={tackice} />
         </CarouselProvider>
       </Container>
     </>

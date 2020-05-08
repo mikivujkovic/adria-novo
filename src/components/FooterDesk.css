@@ -30,6 +30,7 @@
   align-content: center;
   justify-content: flex-end;
   max-width: 10%;
+  padding-left: 10px;
 }
 
 .link-button {
