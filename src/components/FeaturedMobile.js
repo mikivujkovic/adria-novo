@@ -114,6 +114,10 @@ const Date = styled.div`
   align-self: flex-start;
 `;
 
+const dotBack = styled.div`
+  background: transparent;
+`;
+
 const FeaturedMobile = (props) => {
   const tackice = (props) => {
     const {
@@ -147,7 +151,7 @@ const FeaturedMobile = (props) => {
           selected={selected}
           disabled={disableActiveDots ? selected : false}
         >
-          {selected ? <span>⚫</span> : <span>⚪</span>}
+          {selected ? <dotBack>⚫</dotBack> : <dotBack>⚪</dotBack>}
         </Dot>
       );
     }
