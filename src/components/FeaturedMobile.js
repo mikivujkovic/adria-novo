@@ -115,7 +115,7 @@ const Date = styled.div`
 `;
 
 const dotBack = styled.div`
-  background: "white";
+  background-color: "white";
   border: none;
 `;
 
@@ -151,6 +151,7 @@ const FeaturedMobile = (props) => {
           slide={slide}
           selected={selected}
           disabled={disableActiveDots ? selected : false}
+          className="dotClass"
         >
           {selected ? <dotBack>⚫</dotBack> : <dotBack>⚪</dotBack>}
         </Dot>
