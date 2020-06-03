@@ -19,7 +19,6 @@ import loginOutlined from "@iconify/icons-ant-design/login-outlined";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginBottom: "40px",
     maxWidth: "90vw",
   },
   menuButton: {
@@ -40,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     height: "50px",
+    marginTop: "10px",
   },
   login: {
     height: "30px",

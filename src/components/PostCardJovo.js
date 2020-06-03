@@ -9,12 +9,19 @@ const PostDiv = styled.div`
   align-items: space-between;
   height: 100%;
   margin: 50 0;
+  transition: transform 0.2s; /* Animation */
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   z-index: -1;
   height: 200px;
+  box-shadow: 1px 1px 21px 3px rgba(0, 0, 0, 0.78);
+  -webkit-box-shadow: 1px 1px 21px 3px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 1px 1px 21px 3px rgba(0, 0, 0, 0.78);
 `;
 
 const Category = styled.div`
@@ -32,9 +39,11 @@ const Category = styled.div`
 const Title = styled.div`
   font-size: 1.6rem;
   color: #384955;
-  margin-top: auto;
+  margin-top: 5px;
   align-self: flex-start;
   margin-left: 10px;
+  line-height: 80%;
+  text-align: left;
 `;
 
 const PostCardJovo = (props) => {

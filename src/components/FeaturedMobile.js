@@ -105,6 +105,8 @@ const Title = styled.div`
   align-self: flex-start;
   margin-left: 20px;
   margin-bottom: 10px;
+  line-height: 80%;
+  text-align: left;
 `;
 
 const Date = styled.div`
@@ -153,7 +155,20 @@ const FeaturedMobile = (props) => {
           disabled={disableActiveDots ? selected : false}
           className="dotClass"
         >
-          {selected ? <dotBack>⚫</dotBack> : <dotBack>⚪</dotBack>}
+          {selected ? (
+            <dotBack
+              style={{
+                color: "#00adee",
+                fontSize: "x-large",
+              }}
+            >
+              ⦿
+            </dotBack>
+          ) : (
+            <dotBack style={{ color: "#00adee", fontSize: "x-large" }}>
+              ⦾
+            </dotBack>
+          )}
         </Dot>
       );
     }

@@ -56,6 +56,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     maxWidth: "min(1200px, 90%)",
   },
+  searchTitle: {
+    color: "#384955",
+    fontFamily: "Roboto",
+    fontSize: "x-large",
+    fontWeight: "normal",
+  },
 }));
 
 function Search(props) {
@@ -102,7 +108,7 @@ function Search(props) {
     <div className={classes.root}>
       <div className={classes.content}>
         <div className={classes.searchContainer}>
-          <h1>Pretraga</h1>
+          <h2 className={classes.searchTitle}>Unesite pojam za pretragu</h2>
           <input
             type="text"
             placeholder="search..."
